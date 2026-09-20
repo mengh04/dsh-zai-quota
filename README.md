@@ -41,12 +41,3 @@ cd dsh-zai-quota
 ```sh
 dsh plugin --profile web remove @deepseek-ai/dsh-host-zai-quota @deepseek-ai/dsh-client-ui-zai-quota dsh-zai-quota-bundle
 ```
-
-## 配置
-
-组合壳的 `bundle/cordis.patch.yml` 携带主机半边的默认配置（端点、超时、缓存时长、凭据引用），可按需修改后重新构建。
-
-## 已知限制
-
-- provider 门控按 `zai` 前缀匹配 provider id；非 `zai` 命名的智谱路由需调整 `client/src/client/ZaiQuotaSection.tsx` 中的 `ZAI_PROVIDER_PATTERN`
-- 弹层锚点按 dialog 角色与本地化标签（`上下文已用` / `of context used`）识别；dsh 发布版若重命名该标签，需同步调整 `CONTEXT_PANEL_LABEL`
