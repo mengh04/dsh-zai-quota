@@ -67,7 +67,9 @@
 .fill {
   height: 100%;
   border-radius: 1px;
-  background: var(--dsw-alias-label-tertiary);
+  /* `--dsw-alias-brand-primary` binds to near-black/white on this platform; the
+     blue token lives on the "-new-color" alias (see ui-dockkit's usage note). */
+  background: var(--dsw-alias-brand-primary-new-colorprimary-new-color, #4d6bfe);
 }
 
 .detail {

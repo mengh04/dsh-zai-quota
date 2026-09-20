@@ -8,6 +8,8 @@ export default defineConfig({
   format: ['esm'],
   platform: 'node',
   target: 'es2024',
+  // Keep the emitted filenames aligned with package.json's ".js" exports.
+  fixedExtension: false,
   dts: true,
   clean: true,
   external: ['@deepseek-ai/schemastery', '@deepseek-ai/dsh-credentials', '@deepseek-ai/cordis'],
