@@ -1,0 +1,9 @@
+{
+  "name": "dsh-zai-quota-bundle",
+  "version": "0.1.5-rc.2",
+  "private": true,
+  "type": "module",
+  "description": "Local bundle activating the Z.AI coding-plan quota host route and browser section",
+  "files": ["cordis.patch.yml"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

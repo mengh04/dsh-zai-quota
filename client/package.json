@@ -1,0 +1,52 @@
+{
+  "name": "@deepseek-ai/dsh-client-ui-zai-quota",
+  "description": "Browser surface for the Z.AI coding-plan quota: plan windows below the composer card, shown only for Z.AI providers",
+  "version": "0.1.5-rc.2",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "README.md",
+    "README.zh.md"
+  ],
+  "scripts": {
+    "build": "node build-client.mjs && node build-node.mjs"
+  },
+  "license": "MIT",
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-client-locale": "0.1.5-rc.2",
+    "@deepseek-ai/dsh-client-store": "0.1.5-rc.2",
+    "@deepseek-ai/dsh-client-test-runtime": "0.1.5-rc.2",
+    "@deepseek-ai/dsh-client-ui-model-selection": "0.1.5-rc.2",
+    "@deepseek-ai/dsh-host-zai-quota": "file:../host",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsx": "^4.19.0",
+    "typescript": "^6.0.0",
+    "vitest": "^4.0.0",
+    "esbuild": "^0.28.0"
+  }
+}

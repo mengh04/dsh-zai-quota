@@ -1,0 +1,10 @@
+- insert:
+    - id: zai-quota
+      name: '@deepseek-ai/dsh-host-zai-quota'
+      config:
+        credentialRef: ZAI_CODING_CN_API_KEY
+        endpoint: https://open.bigmodel.cn/api/monitor/usage/quota/limit
+        timeoutMs: 10000
+        cacheMs: 60000
+    - id: ui-zai-quota
+      name: '@deepseek-ai/dsh-client-ui-zai-quota'

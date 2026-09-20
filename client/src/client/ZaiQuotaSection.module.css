@@ -1,0 +1,103 @@
+/* Coding-plan quota section inside the composer's context panel: one meter row
+   per provider window plus the reading's failure state. */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 0.5px solid var(--dsw-alias-border-l1);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.title {
+  color: var(--dsw-alias-label-secondary);
+  font-weight: 500;
+}
+
+.level {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.windows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.windowHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.figure {
+  color: var(--dsw-alias-label-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.bar {
+  height: 4px;
+  border-radius: 999px;
+  corner-shape: round;
+  background: var(--dsw-alias-interactive-bg-hover);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--dsw-alias-label-tertiary);
+}
+
+.detail {
+  color: var(--dsw-alias-label-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.failure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.muted {
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.retry {
+  flex: none;
+  padding: 1px 8px;
+  border: none;
+  border-radius: 24px;
+  background: transparent;
+  color: var(--dsw-alias-label-secondary);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
