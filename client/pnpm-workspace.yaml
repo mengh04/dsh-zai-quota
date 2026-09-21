@@ -1,2 +1,5 @@
+# Build-script approvals (pnpm v11 reads `allowBuilds`; v10 reads `onlyBuiltDependencies`).
 allowBuilds:
   esbuild: true
+onlyBuiltDependencies:
+  - esbuild
